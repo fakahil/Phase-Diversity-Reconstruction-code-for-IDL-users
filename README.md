@@ -8,4 +8,6 @@ The code requires a pair of focused-defocused images acquired by an optical inst
 
 In the file "main.py", you will have to enter all the parameters of your optical system and the corresponding data. Everything is documented there.
 
-The code will be under constant improvement and including jupyter notebooks is also foreseen. Turning it into a package that could be installed will be done once the code is finished.
+To test for the robustness of the code, I have tested the algorithm on a MURAM simulation by creating a wavefront to degrade the original data and then retrieve it with the original scene after running the PD code. A check of robustness is done by comparing the original and restored data. This is documented in this [jupyter notebook](https://github.com/fakahil/Phase-Diversity-Reconstruction-code/blob/master/PD_robustness.ipynb)
+
+The code will be under constant improvement and including more jupyter notebooks is also foreseen. Turning it into a package that could be installed will be done once the code is finished.
