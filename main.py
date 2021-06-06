@@ -53,7 +53,7 @@ cut_off = 0.5
 reg = 1e-10
 
 ## '''''''''''''''''''Focused-defocused data
-## 
+## Example
 path_images = "/home/fatima/Desktop/solar_orbiter_project/commissioning/phi-5/"
 im0 = pyfits.getdata(path_images+'solo_L0_phi-hrt-ilam_20200420T132834_V202004201547C_0024160022000.fits')[0,:,:]
 imk = pyfits.getdata(path_images+'solo_L0_phi-hrt-ilam_20200420T132834_V202004201547C_0024160022000.fits')[1,:,:]
@@ -61,6 +61,7 @@ imk = pyfits.getdata(path_images+'solo_L0_phi-hrt-ilam_20200420T132834_V20200420
 dark = pyfits.getdata(path_images+'dark_kinga.fits')
 flat_field = pyfits.getdata(path_images+'solo_L0_phi-hrt-ilam_20200417T234528_V202004251106C_0024150029000.fits')[20,:,:]
 
+## calibration and scaling
 im0 = (im0/20./256.- dark/256./20.)/(flat_field/256./150. - dark/256./20.)
 imk = (imk/20./256.- dark/256./20.)/(flat_field/256./150. - dark/256./20.)
  
